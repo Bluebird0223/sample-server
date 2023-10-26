@@ -23,19 +23,19 @@ app.use(bodyParser.json());
 console.log("Session Secret:", sessionSecret);
 
 // database config
-const db = mysql.createConnection({
-  host: "216.10.240.102",
-  user: "falan7rb_naitik_r",
-  password: "Registry@2023",
-  database: "falan7rb_advocate_invoice",
-  port: 3306,
-});
-
 // const db = mysql.createConnection({
-//   host: "localhost",
-//   user: "root",
-//   database: "advocate"
+//   host: "216.10.240.102",
+//   user: "falan7rb_naitik_r",
+//   password: "Registry@2023",
+//   database: "falan7rb_advocate_invoice",
+//   port: 3306,
 // });
+
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  database: "advocate"
+});
 
 db.connect((err) => {
   if (err) {
